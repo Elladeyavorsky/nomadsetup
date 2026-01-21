@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import KitBlock from '../components/KitBlock.astro';
+import pagesData from '../content/pages.json';
+
+const { kits } = pagesData;
+---
+
+<Layout title="Kits Recommandés" description={kits.description}>
+  <header class="page-header">
+    <h1>{kits.title}</h1>
+    <p>{kits.description}</p>
+  </header>
+
+  <div class="kits-container">
+    {kits.list.map(kit => (
+      <KitBlock
+        title={kit.title}
+        budget={kit.budget}
+        description={kit.description}
+        productIds={kit.productIds}
+      />
+    ))}
+  </div>
+
+  <section class="guide-section">
+    <h2>{kits.guide.title}</h2>
+    <p>{kits.guide.content}</p>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .guide-section {
+    margin-top: 5rem;
+    padding: 2rem;
+    background: #fafafa;
+    border-radius: 8px;
+  }
+</style>

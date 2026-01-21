@@ -1,0 +1,22 @@
+---
+import siteData from '../content/site.json';
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <p>&copy; {year} {siteData.siteName}. Tous droits réservés.</p>
+    <p class="text-sm">
+      Ce site participe au Programme Partenaires d’Amazon. Si vous achetez via nos liens, nous pouvons toucher une commission sans surcoût pour vous.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    border-top: 1px solid var(--color-border);
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+  }
+</style>

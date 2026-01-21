@@ -1,0 +1,64 @@
+---
+import affiliateData from '../content/affiliate-links.json';
+
+interface Props {
+  productId: string;
+}
+
+const { productId } = Astro.props;
+// @ts-ignore
+const product = affiliateData[productId];
+
+if (!product) {
+  throw new Error(`Product ID ${productId} not found in affiliate-links.json`);
+}
+---
+
+<div class="affiliate-block card">
+  <div class="affiliate-info">
+      <span class="category-tag">{product.category}</span>
+      <h3 class="product-name">{product.label}</h3>
+  </div>
+  <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer" class="btn">
+      Voir sur Amazon
+  </a>
+</div>
+
+<style>
+.affiliate-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background: #fdfdfd;
+    margin: 2rem 0;
+}
+
+.category-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-light);
+}
+
+.product-name {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    border: none;
+    padding: 0;
+}
+
+@media (min-width: 640px) {
+    .affiliate-block {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 2rem;
+    }
+    
+    .affiliate-info {
+        align-items: flex-start;
+    }
+}
+</style>

@@ -1,0 +1,15 @@
+---
+interface Props {
+    href: string;
+    label: string;
+    variant?: 'primary' | 'secondary'; // Could expand later
+  }
+  
+  const { href, label } = Astro.props;
+  ---
+  
+  <a href={href} class="btn">{label}</a>
+  
+  <style>
+      /* Already styled globally but component wrapper is good practice */
+  </style>

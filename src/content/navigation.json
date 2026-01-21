@@ -1,0 +1,24 @@
+{
+    "mainMenu": [
+        {
+            "label": "Setup",
+            "path": "/setup"
+        },
+        {
+            "label": "Tech",
+            "path": "/tech"
+        },
+        {
+            "label": "One Bag",
+            "path": "/one-bag"
+        },
+        {
+            "label": "Focus & Wi-Fi",
+            "path": "/focus-wifi"
+        },
+        {
+            "label": "Kits",
+            "path": "/kits"
+        }
+    ]
+}

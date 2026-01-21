@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import AffiliateBlock from '../components/AffiliateBlock.astro';
+import pagesData from '../content/pages.json';
+import affiliateData from '../content/affiliate-links.json';
+
+export async function getStaticPaths() {
+  // @ts-ignore
+  const pages = Object.values(pagesData.moneyPages);
+  return pages.map((page: any) => ({
+    params: { slug: page.slug },
+    props: { page }
+  }));
+}
+
+const { page } = Astro.props;
+---
+
+<Layout title={page.title} description={page.summary.join('. ')}>
+  <article class="money-page">
+    <header class="page-header">
+      <h1>{page.title}</h1>
+      <div class="summary-box">
+        <h3>En bref</h3>
+        <ul>
+          {page.summary.map((point: string) => <li>{point}</li>)}
+        </ul>
+      </div>
+    </header>
+
+    <div class="disclaimer-banner text-sm">
+       Note : Certains liens sont affiliés. Nous recommandons uniquement ce que nous utiliserions nous-mêmes.
+    </div>
+
+    <!-- Criteria Section -->
+    <section class="section">
+      <h2>Critères de sélection</h2>
+      <p>Pour choisir le meilleur modèle, nous avons analysé :</p>
+      <ul class="criteria-list">
+        {page.criteria.map((c: string) => <li>{c}</li>)}
+      </ul>
+    </section>
+
+    <!-- Top Pick -->
+    <section class="section highlight-section">
+      <h2>🏆 Notre Choix : {affiliateData[page.myPickId]?.label}</h2>
+      <p>Le meilleur compromis performance/prix pour la plupart des voyageurs.</p>
+      <AffiliateBlock productId={page.myPickId} />
+    </section>
+
+    <!-- All Recommendations -->
+    <section class="section">
+      <h2>Toutes les recommandations</h2>
+      {page.productIds.filter((id: string) => id !== page.myPickId).map((id: string) => (
+        <AffiliateBlock productId={id} />
+      ))}
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+      <h2>Questions Fréquentes</h2>
+      {page.faq.map((item: any) => (
+        <div class="faq-item">
+          <h3>{item.q}</h3>
+          <p>{item.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .money-page {
+    max-width: 700px; /* Slightly wider for product blocks */
+    margin: 0 auto;
+  }
+  .page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  .summary-box {
+    background: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  .disclaimer-banner {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    padding: 0.75rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-text-light);
+  }
+  .section {
+    margin-top: 4rem;
+  }
+  .highlight-section {
+    border: 2px solid var(--color-accent);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  .criteria-list {
+    columns: 2;
+  }
+  .faq-item {
+    margin-bottom: 2rem;
+  }
+  .faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

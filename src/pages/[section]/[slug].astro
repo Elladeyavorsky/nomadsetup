@@ -1,0 +1,94 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AffiliateBlock from '../../components/AffiliateBlock.astro';
+import articlesData from '../../content/articles.json';
+import { marked } from 'marked'; // We need simple markdown parsing
+
+export async function getStaticPaths() {
+  return articlesData.map(article => ({
+    params: { section: article.section, slug: article.slug },
+    props: { article }
+  }));
+}
+
+const { article } = Astro.props;
+const contentHtml = marked.parse(article.content);
+
+// Find related articles (same section, exclude current)
+const relatedArticles = articlesData
+    .filter(a => a.section === article.section && a.id !== article.id)
+    .slice(0, 3);
+---
+
+<Layout title={article.title} description={article.excerpt}>
+  <article class="article-content">
+    <header>
+        <div class="meta text-sm">
+            <a href={`/${article.section}`}>{article.section}</a> • <time>{article.publishedDate}</time>
+        </div>
+        <h1>{article.title}</h1>
+        <p class="lead">{article.excerpt}</p>
+    </header>
+    
+    <div class="content" set:html={contentHtml} />
+    
+    {article.featuredAffiliateProductIds.length > 0 && (
+        <div class="affiliate-section">
+            <h3>Produits recommandés dans cet article</h3>
+            <p class="disclaimer text-sm">
+                Transparence : cet article contient des liens affiliés. Cela soutient notre travail sans surcoût pour vous.
+            </p>
+            {article.featuredAffiliateProductIds.map(id => (
+                <AffiliateBlock productId={id} />
+            ))}
+        </div>
+    )}
+  </article>
+
+  {relatedArticles.length > 0 && (
+      <section class="related-section">
+          <h3>Lire aussi</h3>
+          <ul class="related-list">
+              {relatedArticles.map(a => (
+                  <li><a href={`/${a.section}/${a.slug}`}>{a.title}</a></li>
+              ))}
+          </ul>
+      </section>
+  )}
+</Layout>
+
+<style>
+    .article-content {
+        max-width: 65ch;
+        margin: 0 auto;
+    }
+    .lead {
+        font-size: 1.2rem;
+        color: var(--color-text-light);
+        margin: 1.5rem 0 3rem;
+    }
+    .meta a {
+        text-transform: uppercase;
+        color: var(--color-text-light);
+    }
+    .affiliate-section {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+    }
+    .disclaimer {
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+    .related-section {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--color-border);
+        max-width: 65ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Simple markdown styles */
+    .content :global(h2) { margin-top: 2em; }
+    .content :global(ul) { padding-left: 1.2em; }
+</style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+    title: string;
+    excerpt: string;
+    url: string;
+    date: string;
+    section: string;
+}
+
+const { title, excerpt, url, date, section } = Astro.props;
+---
+
+<article class="article-card card">
+    <div class="meta">
+        <span class="section-tag">{section}</span>
+        <time datetime={date}>{date}</time>
+    </div>
+    <h3 class="card-title">
+        <a href={url}>{title}</a>
+    </h3>
+    <p class="excerpt">{excerpt}</p>
+</article>
+
+<style>
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+    .card-title {
+        margin-top: 0;
+        font-size: 1.4rem;
+        border: none;
+    }
+    .card-title a {
+        border: none;
+    }
+    .card-title a:hover {
+        text-decoration: underline;
+    }
+    .excerpt {
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+</style>

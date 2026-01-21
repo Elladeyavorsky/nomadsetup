@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ArticleCard from '../../components/ArticleCard.astro';
+import pagesData from '../../content/pages.json';
+import articlesData from '../../content/articles.json';
+import navData from '../../content/navigation.json';
+
+export async function getStaticPaths() {
+  const sections = ['setup', 'tech', 'one-bag', 'focus-wifi'];
+  return sections.map(section => ({
+    params: { section },
+    props: { section }
+  }));
+}
+
+const { section } = Astro.props;
+
+// Get hub data
+// @ts-ignore
+const hubInfo = pagesData.hubs[section];
+const articles = articlesData.filter(a => a.section === section);
+
+// Fallback if no hub info found (safety)
+const title = hubInfo?.title || section;
+const intro = hubInfo?.intro || '';
+
+---
+
+<Layout title={title} description={intro}>
+  <header class="hub-header">
+    <h1>{title}</h1>
+    <p>{intro}</p>
+  </header>
+
+  <div class="articles-grid grid-2">
+    {articles.map(article => (
+       <ArticleCard
+          title={article.title}
+          excerpt={article.excerpt}
+          url={`/${article.section}/${article.slug}`}
+          date={article.publishedDate}
+          section={article.section}
+        />
+    ))}
+  </div>
+</Layout>
+
+<style>
+  .hub-header {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+</style>

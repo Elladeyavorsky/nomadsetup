@@ -1,0 +1,73 @@
+---
+import affiliateData from '../content/affiliate-links.json';
+
+interface Props {
+  title: string;
+  budget: string;
+  description: string;
+  productIds: string[];
+}
+
+const { title, budget, description, productIds } = Astro.props;
+---
+
+<div class="kit-block">
+  <div class="kit-header">
+    <h2>{title} <span class="budget">({budget})</span></h2>
+    <p>{description}</p>
+  </div>
+  
+  <ul class="kit-items">
+    {productIds.map(id => {
+      // @ts-ignore
+      const product = affiliateData[id];
+      if (!product) return null;
+      return (
+        <li class="kit-item">
+          <span class="item-name">{product.label}</span>
+          <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer" class="item-link">Vérifier le prix</a>
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+<style>
+.kit-block {
+    margin-bottom: 4rem;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.budget {
+    color: var(--color-text-light);
+    font-weight: 400;
+    font-size: 0.8em;
+}
+
+.kit-items {
+    list-style: none;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.kit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.kit-item:last-child {
+    border-bottom: none;
+}
+
+.item-link {
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+</style>

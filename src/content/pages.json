@@ -1,0 +1,169 @@
+{
+    "home": {
+        "hero": {
+            "headline": "Voyager léger, travailler mieux.",
+            "ctas": [
+                {
+                    "label": "Voir le setup complet",
+                    "url": "/setup"
+                },
+                {
+                    "label": "Voir les kits",
+                    "url": "/kits"
+                },
+                {
+                    "label": "Voir les indispensables",
+                    "url": "#essentials"
+                }
+            ]
+        },
+        "essentials": {
+            "title": "Les Indispensables",
+            "items": [
+                {
+                    "label": "Meilleur Laptop Stand",
+                    "url": "/best-travel-laptop-stand"
+                },
+                {
+                    "label": "Meilleur Chargeur GaN",
+                    "url": "/best-gan-charger-for-travel"
+                },
+                {
+                    "label": "Kits Complets",
+                    "url": "/kits"
+                }
+            ]
+        }
+    },
+    "hubs": {
+        "setup": {
+            "title": "Setup Minimaliste",
+            "intro": "L'équilibre parfait entre ergonomie et portabilité. Votre bureau tient dans une pochette A4."
+        },
+        "tech": {
+            "title": "Tech & Gadgets",
+            "intro": "Les outils essentiels pour le nomade digital moderne. Puissance maximale, encombrement minimal."
+        },
+        "one-bag": {
+            "title": "Voyage One Bag",
+            "intro": "Tout ce dont vous avez besoin sur votre dos. Plus jamais de bagage en soute."
+        },
+        "focus-wifi": {
+            "title": "Focus & Connectivité",
+            "intro": "Restez connecté et productif, que vous soyez dans un café à Bali ou un train pour Berlin."
+        }
+    },
+    "kits": {
+        "title": "Kits Recommandés",
+        "description": "Des configurations testées et approuvées pour tous les budgets.",
+        "list": [
+            {
+                "id": "kit-essential",
+                "title": "Kit Essentiel",
+                "budget": "50–80€",
+                "description": "Juste le nécessaire pour sauver votre dos.",
+                "productIds": [
+                    "lstand-02",
+                    "cable-01"
+                ]
+            },
+            {
+                "id": "kit-office",
+                "title": "Kit Bureau Mobile",
+                "budget": "150–250€",
+                "description": "Le confort d'un bureau fixe, partout.",
+                "productIds": [
+                    "lstand-01",
+                    "gan-02",
+                    "cable-01"
+                ]
+            },
+            {
+                "id": "kit-comfort",
+                "title": "Kit Confort & Pro",
+                "budget": "300–600€",
+                "description": "Le summum de la productivité en déplacement.",
+                "productIds": [
+                    "lstand-01",
+                    "gan-01",
+                    "anc-01",
+                    "bag-01"
+                ]
+            }
+        ],
+        "guide": {
+            "title": "Comment choisir ?",
+            "content": "Commencez par le support d'ordinateur, c'est la base de l'ergonomie. Ensuite, réduisez la taille de votre chargeur."
+        }
+    },
+    "moneyPages": {
+        "laptop-stand": {
+            "slug": "best-travel-laptop-stand",
+            "title": "Les Meilleurs Supports PC pour Voyageurs (2025)",
+            "summary": [
+                "Ultra-léger et compact",
+                "Hauteur réglable obligatoire",
+                "Robuste pour usage quotidien"
+            ],
+            "criteria": [
+                "Poids (<200g)",
+                "Stabilité",
+                "Compacité plié",
+                "Facilité d'installation"
+            ],
+            "productIds": [
+                "lstand-01",
+                "lstand-02"
+            ],
+            "myPickId": "lstand-01",
+            "faq": [
+                {
+                    "q": "Pourquoi utiliser un support ?",
+                    "a": "Pour élever l'écran à hauteur des yeux et éviter les douleurs cervicales."
+                },
+                {
+                    "q": "Est-ce stable ?",
+                    "a": "Oui, les modèles comme le Roost sont étonnamment stables."
+                },
+                {
+                    "q": "Faut-il un clavier externe ?",
+                    "a": "Absolument, sinon la frappe est impossible."
+                }
+            ]
+        },
+        "gan-charger": {
+            "slug": "best-gan-charger-for-travel",
+            "title": "Les Meilleurs Chargeurs GaN de Voyage (2025)",
+            "summary": [
+                "Puissance 65W minimum",
+                "3 ports (2C + 1A)",
+                "Format compact"
+            ],
+            "criteria": [
+                "Puissance/Taille",
+                "Chauffe",
+                "Nombre de ports",
+                "Fiabilité marque"
+            ],
+            "productIds": [
+                "gan-01",
+                "gan-02"
+            ],
+            "myPickId": "gan-01",
+            "faq": [
+                {
+                    "q": "C'est quoi le GaN ?",
+                    "a": "Nitrure de Gallium. Permet des composants plus petits et efficaces."
+                },
+                {
+                    "q": "65W suffisent pour un MacBook Pro ?",
+                    "a": "Oui, pour la plupart des modèles 13 et 14 pouces."
+                },
+                {
+                    "q": "Est-ce sûr ?",
+                    "a": "Oui, les grandes marques comme Anker ont d'excellentes protections."
+                }
+            ]
+        }
+    }
+}
