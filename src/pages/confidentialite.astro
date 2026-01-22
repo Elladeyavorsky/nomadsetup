@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Politique de Confidentialité">
+  <section class="section">
+    <h1>Politique de Confidentialité</h1>
+    
+    <p>Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}</p>
+
+    <h2>1. Collecte de données</h2>
+    <p>
+      Nous ne collectons aucune donnée personnelle nominative via ce site (pas de commentaires, pas de compte utilisateur).
+    </p>
+
+    <h2>2. Cookies</h2>
+    <p>
+      Ce site peut utiliser des cookies à des fins statistiques (mesure d'audience) ou de fonctionnement. Vous pouvez configurer votre navigateur pour refuser les cookies.
+    </p>
+    <p>
+      En cliquant sur des liens d'affiliation (vers Amazon, etc.), un cookie peut être déposé par le site marchand pour suivre la vente. Ce site n'a pas accès à vos données d'achat personnelles sur ces plateformes.
+    </p>
+
+    <h2>3. Contact</h2>
+    <p>
+      Pour toute question relative à cette politique de confidentialité, vous pouvez nous contacter à [Votre adresse email].
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+</style>

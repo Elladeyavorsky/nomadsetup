@@ -5,6 +5,11 @@ const year = new Date().getFullYear();
 
 <footer>
   <div class="container">
+    <div class="footer-links">
+      <a href="/mentions-legales">Mentions Légales</a>
+      <span class="separator">•</span>
+      <a href="/confidentialite">Politique de Confidentialité</a>
+    </div>
     <p>&copy; {year} {siteData.siteName}. Tous droits réservés.</p>
     <p class="text-sm">
       Ce site participe au Programme Partenaires d’Amazon. Si vous achetez via nos liens, nous pouvons toucher une commission sans surcoût pour vous.
@@ -18,5 +23,27 @@ const year = new Date().getFullYear();
     padding: 3rem 0;
     margin-top: 4rem;
     text-align: center;
+  }
+  footer p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-links a {
+    color: var(--color-text-light);
+    text-decoration: none;
+  }
+  .footer-links a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  .separator {
+    color: var(--color-text-lighter);
   }
 </style>

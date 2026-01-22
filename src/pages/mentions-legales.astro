@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import siteData from '../content/site.json';
+---
+
+<Layout title="Mentions Légales">
+  <section class="section">
+    <h1>Mentions Légales</h1>
+    
+    <h2>1. Éditeur du site</h2>
+    <p>
+      Le site <strong>{siteData.siteName}</strong> est édité à titre personnel.
+    </p>
+
+    <h2>2. Hébergement</h2>
+    <p>
+      Ce site est hébergé par [Nom de l'hébergeur, ex: Vercel, Netlify, OVH], dont le siège social est situé à [Adresse de l'hébergeur].
+    </p>
+
+    <h2>3. Propriété intellectuelle</h2>
+    <p>
+      L’ensemble de ce site relève de la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+    </p>
+
+    <h2>4. Liens d'affiliation</h2>
+    <p>
+      Ce site participe au Programme Partenaires d’Amazon EU, un programme d’affiliation conçu pour permettre à des sites de percevoir une rémunération grâce à la création de liens vers Amazon.fr. L'utilisateur reste libre de rechercher les produits par lui-même s'il ne souhaite pas passer par les liens du site.
+    </p>
+  </section>
+</Layout>
+
+<style>
+  .section {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+</style>

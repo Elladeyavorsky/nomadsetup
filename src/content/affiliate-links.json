@@ -1,46 +1,85 @@
 {
     "lstand-01": {
         "label": "Roost Laptop Stand V3",
+        "keywords": [
+            "Roost Stand",
+            "Roost V3",
+            "support Roost"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B01C9KG8IG?tag=lightnomad-21",
         "category": "Setup"
     },
     "lstand-02": {
         "label": "Nexstand K2",
+        "keywords": [
+            "Nexstand",
+            "Nexstand K2"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B01HHYQBB8?tag=lightnomad-21",
         "category": "Setup"
     },
     "gan-01": {
         "label": "Anker 735 GaNPrime 65W",
+        "keywords": [
+            "Anker 735",
+            "Anker Nano II",
+            "chargeur Anker"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B09C5RG6KV?tag=lightnomad-21",
         "category": "Tech"
     },
     "gan-02": {
         "label": "UGREEN Nexode 65W",
+        "keywords": [
+            "UGREEN Nexode",
+            "chargeur UGREEN"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B091N7FGL9?tag=lightnomad-21",
         "category": "Tech"
     },
     "bag-01": {
         "label": "Peak Design Travel Backpack 45L",
+        "keywords": [
+            "Peak Design Travel",
+            "Peak Design 45L"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B07GH3CBL4?tag=lightnomad-21",
         "category": "One Bag"
     },
     "bag-02": {
         "label": "Osprey Farpoint 40",
+        "keywords": [
+            "Osprey Farpoint",
+            "Farpoint 40"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B09TRV5C24?tag=lightnomad-21",
         "category": "One Bag"
     },
     "anc-01": {
         "label": "Sony WH-1000XM5",
+        "keywords": [
+            "Sony WH-1000XM5",
+            "XM5",
+            "Sony XM5"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B09Y2LX7S8?tag=lightnomad-21",
         "category": "Focus"
     },
     "wifi-01": {
         "label": "TP-Link Routeur de Voyage AC750",
+        "keywords": [
+            "TP-Link AC750",
+            "routeur de voyage"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B01NAYG15H?tag=lightnomad-21",
         "category": "Focus & Wi-Fi"
     },
     "cable-01": {
         "label": "Anker PowerLine III USB-C",
+        "keywords": [
+            "Anker PowerLine",
+            "câble Anker"
+        ],
         "amazonUrl": "https://amazon.fr/dp/B088NRLM5B?tag=lightnomad-21",
         "category": "Tech"
     }

@@ -2,7 +2,43 @@
 import Layout from '../../layouts/Layout.astro';
 import AffiliateBlock from '../../components/AffiliateBlock.astro';
 import articlesData from '../../content/articles.json';
-import { marked } from 'marked'; // We need simple markdown parsing
+import affiliateLinksData from '../../content/affiliate-links.json';
+import { marked } from 'marked';
+
+// Helper to escape regex special characters
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Function to auto-link products in markdown text
+function autoLinkProducts(content) {
+  let linkedContent = content;
+  
+  Object.values(affiliateLinksData).forEach(product => {
+    // Combine label and keywords associated with the product
+    const terms = [product.label, ...(product.keywords || [])];
+    
+    // Create a Set to remove duplicates and sort by length descending 
+    // to match longest phrases first (e.g. "Anker 735" before "Anker")
+    const uniqueTerms = [...new Set(terms)].sort((a, b) => b.length - a.length);
+
+    uniqueTerms.forEach(term => {
+      if (!term) return;
+      
+      // Regex to find the term:
+      // 1. Not inside a markdown link already (complex to perfect, but we can avoid simple cases)
+      // 2. Word boundaries or specific punctuation
+      // We use a simplified lookbehind approach or replacement callback to check context if needed.
+      // For simplicity in this static site context:
+      const regex = new RegExp(`(?<!\\[)${escapeRegExp(term)}(?!\\])(?!\\([^)]+\\))`, 'g');
+      
+      // Replace with markdown link
+      linkedContent = linkedContent.replace(regex, `[${term}](${product.amazonUrl})`);
+    });
+  });
+  
+  return linkedContent;
+}
 
 export async function getStaticPaths() {
   return articlesData.map(article => ({
@@ -12,7 +48,9 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-const contentHtml = marked.parse(article.content);
+// Auto-link the content before parsing markdown
+const linkedMarkdown = autoLinkProducts(article.content);
+const contentHtml = marked.parse(linkedMarkdown);
 
 // Find related articles (same section, exclude current)
 const relatedArticles = articlesData
