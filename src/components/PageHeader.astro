@@ -1,0 +1,72 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  backgroundImage?: string;
+}
+
+const { title, description, backgroundImage } = Astro.props;
+---
+
+<div class={`full-bleed-hero ${!backgroundImage ? 'grey-bg' : ''}`}>
+  {backgroundImage && <img src={backgroundImage} alt="" class="hero-bg" />}
+  {backgroundImage && <div class="hero-overlay"></div>}
+  <section class="hero-content">
+    <h1>{title}</h1>
+    {description && <p class="subtitle">{description}</p>}
+  </section>
+</div>
+
+<style>
+  .full-bleed-hero {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    position: relative;
+    min-height: 40vh; /* Slightly smaller than home page */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    overflow: hidden;
+  }
+  .full-bleed-hero.grey-bg {
+    background-color: #666666;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  .hero-content {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: var(--container-width);
+    width: 100%;
+    color: white;
+  }
+  .hero-content h1 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    margin-top: 0;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+    color: #f0f0f0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    margin: 1rem auto 0;
+    max-width: 60ch;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
 import AffiliateBlock from '../components/AffiliateBlock.astro';
 import pagesData from '../content/pages.json';
 import affiliateData from '../content/affiliate-links.json';
@@ -17,16 +18,15 @@ const { page } = Astro.props;
 ---
 
 <Layout title={page.title} description={page.summary.join('. ')}>
+  <PageHeader title={page.title} description={page.summary.join('. ')} />
+  
   <article class="money-page">
-    <header class="page-header">
-      <h1>{page.title}</h1>
-      <div class="summary-box">
-        <h3>En bref</h3>
-        <ul>
-          {page.summary.map((point: string) => <li>{point}</li>)}
-        </ul>
-      </div>
-    </header>
+    <div class="summary-box">
+      <h3>En bref</h3>
+      <ul>
+        {page.summary.map((point: string) => <li>{point}</li>)}
+      </ul>
+    </div>
 
     <div class="disclaimer-banner text-sm">
        Note : Certains liens sont affiliés. Nous recommandons uniquement ce que nous utiliserions nous-mêmes.
@@ -74,10 +74,11 @@ const { page } = Astro.props;
     max-width: 700px; /* Slightly wider for product blocks */
     margin: 0 auto;
   }
-  .page-header {
-    text-align: center;
-    margin-bottom: 3rem;
+  .money-page {
+    max-width: 700px; /* Slightly wider for product blocks */
+    margin: 0 auto;
   }
+  /* removed page-header */
   .summary-box {
     background: #f5f5f5;
     padding: 1.5rem;

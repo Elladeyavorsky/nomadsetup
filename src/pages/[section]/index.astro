@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import pagesData from '../../content/pages.json';
 import articlesData from '../../content/articles.json';
 import navData from '../../content/navigation.json';
@@ -27,10 +28,7 @@ const intro = hubInfo?.intro || '';
 ---
 
 <Layout title={title} description={intro}>
-  <header class="hub-header">
-    <h1>{title}</h1>
-    <p>{intro}</p>
-  </header>
+  <PageHeader title={title} description={intro} />
 
   <div class="articles-grid grid-2">
     {articles.map(article => (
@@ -46,9 +44,6 @@ const intro = hubInfo?.intro || '';
 </Layout>
 
 <style>
-  .hub-header {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid var(--color-border);
-  }
+  /* Removed hub-header styles */
+
 </style>
