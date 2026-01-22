@@ -93,11 +93,21 @@ STRUCTURES
 9) FAQ
 10) Conclusion
 
-LIENS INTERNES
-À la fin, propose 3 liens internes (texte, sans URL):
-- [LIEN_INTERNE_1]
-- [LIEN_INTERNE_2]
-- [LIEN_INTERNE_3]
+LIENS INTERNES (OBLIGATOIRE)
+À la fin de l’article, ajoute une section:
+
+## À lire ensuite
+
+Ajoute exactement 3 liens internes cliquables en Markdown, au format:
+- [Titre de l’article](/slug-ou-route)
+
+Règles:
+- Les liens doivent être des URLs internes relatives (commencent par /)
+- Les routes sont en anglais (slugs en anglais), mais les titres restent en français
+- Ne pas utiliser de crochets sans URL
+- Ne pas mettre d’URL externe
+- Si tu ne connais pas les slugs exacts, propose des slugs cohérents en anglais
+- Les liens doivent toujours être cliquables
 
 SUJET À RÉDIGER
 Titre exact: [TITRE]
