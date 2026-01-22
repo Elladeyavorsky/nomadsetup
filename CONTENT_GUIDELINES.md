@@ -107,4 +107,8 @@ Contexte: [EX: voyage 1 sac, Europe, cafés, etc.]
 
 IMPORTANT
 - Ne pas afficher de bloc SEO, ni de mots-clés au début.
+- Signature : 
+    - Si catégorie "One Bag" ou "Focus & Wifi" -> Signer "Ella D."
+    - Si catégorie "Setup" ou "Tech" -> Signer "Gautier D."
+- Datation : Toujours inclure une date de publication (réelle ou simulée mais réaliste).
 - Le rendu final doit être uniquement l’article.

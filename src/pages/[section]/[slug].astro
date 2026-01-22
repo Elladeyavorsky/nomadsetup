@@ -62,6 +62,12 @@ const relatedArticles = articlesData
   <article class="article-content">
     <header>
         <div class="meta text-sm">
+            <div class="author-signature">
+                {article.authorName === "Ella D." && <img src="/authors/ella.jpg" alt="Ella D." class="author-img" />}
+                {article.authorName === "Gautier D." && <img src="/authors/gautier.png" alt="Gautier D." class="author-img" />}
+                <span>Par {article.authorName}</span>
+            </div>
+            <span class="separator">•</span>
             <a href={`/${article.section}`}>{article.section}</a> • <time>{article.publishedDate}</time>
         </div>
         <h1>{article.title}</h1>
@@ -104,6 +110,30 @@ const relatedArticles = articlesData
         font-size: 1.2rem;
         color: var(--color-text-light);
         margin: 1.5rem 0 3rem;
+    }
+    .meta {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    .author-signature {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+        color: var(--color-accent);
+    }
+    .author-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--color-border);
+    }
+    .separator {
+        color: var(--color-border);
     }
     .meta a {
         text-transform: uppercase;
