@@ -32,10 +32,9 @@
         "notes": "Best value"
     },
     "gan-charger-65w": {
-        "label": "UGREEN Nexode 65W",
+        "label": "Chargeur GaN USB-C 65W",
         "keywords": [
-            "Chargeur GaN USB-C 65W",
-            "UGREEN Nexode 65W"
+            "Chargeur GaN USB-C 65W"
         ],
         "amazonUrl": "https://amzn.to/3NBaasq",
         "category": "tech",
@@ -51,8 +50,7 @@
     "usbc-cable-2m": {
         "label": "Câble USB-C solide (2m)",
         "keywords": [
-            "Câble USB-C solide (2m)",
-            "Câble USB Type-C"
+            "Câble USB-C solide (2m)"
         ],
         "amazonUrl": "https://amzn.to/3LL6ROU",
         "category": "tech",
@@ -66,10 +64,9 @@
         "notes": "Essentiel kit charge"
     },
     "universal-adapter": {
-        "label": "Adaptateur universel TESSAN",
+        "label": "Adaptateur universel de voyage",
         "keywords": [
-            "Adaptateur universel de voyage",
-            "Adaptateur universel TESSAN"
+            "Adaptateur universel de voyage"
         ],
         "amazonUrl": "https://amzn.to/4tcuiBA",
         "category": "tech",
@@ -85,8 +82,7 @@
     "travel-power-strip": {
         "label": "Multiprise de voyage compacte",
         "keywords": [
-            "Multiprise de voyage compacte",
-            "NTONPOWER USB-C Power Strip"
+            "Multiprise de voyage compacte"
         ],
         "amazonUrl": "https://amzn.to/4qfoN2p",
         "category": "tech",
@@ -114,9 +110,8 @@
         ]
     },
     "usbc-hub-hdmi": {
-        "label": "Hub USB-C (HDMI + multiports)",
+        "label": "Hub USB-C (HDMI + USB)",
         "keywords": [
-            "Hub USB-C (HDMI + multiports)",
             "Hub USB-C (HDMI + USB)"
         ],
         "amazonUrl": "https://amzn.to/4r9Zoru",
@@ -130,10 +125,9 @@
         ]
     },
     "laptop-sleeve-14": {
-        "label": "Housse laptop fine",
+        "label": "Housse laptop fine (13–14\")",
         "keywords": [
-            "Housse laptop fine (13–14\")",
-            "Housse laptop fine"
+            "Housse laptop fine (13–14\")"
         ],
         "amazonUrl": "https://amzn.to/4aap8hI",
         "category": "setup",
@@ -146,9 +140,8 @@
         ]
     },
     "power-bank-travel": {
-        "label": "Power bank compacte",
+        "label": "Power bank compatible avion",
         "keywords": [
-            "Power bank compacte",
             "Power bank compatible avion"
         ],
         "amazonUrl": "https://amzn.to/4pYxa2a",
@@ -197,8 +190,7 @@
     "webcam-compact": {
         "label": "Webcam compacte (si besoin)",
         "keywords": [
-            "Webcam compacte (si besoin)",
-            "Webcam compacte"
+            "Webcam compacte (si besoin)"
         ],
         "amazonUrl": "https://amzn.to/4rb1Ii7",
         "category": "focus-wifi",
@@ -212,9 +204,8 @@
         "notes": "Kit appels"
     },
     "packing-cubes": {
-        "label": "Packing cubes (set de compression)",
+        "label": "Packing cubes (set)",
         "keywords": [
-            "Packing cubes (set de compression)",
             "Packing cubes (set)"
         ],
         "amazonUrl": "https://amzn.to/4rgNL2h",
