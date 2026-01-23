@@ -7,16 +7,28 @@
             "support Roost"
         ],
         "amazonUrl": "https://amazon.fr/dp/B01C9KG8IG?tag=lightnomad-21",
-        "category": "Setup"
+        "category": "Setup",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Roost+Stand",
+        "facts": [
+            "Ultra-léger (170g)",
+            "Hauteur réglable",
+            "Pliable en une seconde"
+        ]
     },
-    "lstand-02": {
+    "nexstand-k2": {
         "label": "Nexstand K2",
         "keywords": [
             "Nexstand",
             "Nexstand K2"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B01HHYQBB8?tag=lightnomad-21",
-        "category": "Setup"
+        "amazonUrl": "https://amzn.to/3M3Q49N",
+        "category": "Setup",
+        "imageUrl": "/products/nexstand-k2.png",
+        "facts": [
+            "234 g",
+            "8 hauteurs",
+            "10–17 pouces"
+        ]
     },
     "gan-01": {
         "label": "Anker 735 GaNPrime 65W",
@@ -26,7 +38,13 @@
             "chargeur Anker"
         ],
         "amazonUrl": "https://amazon.fr/dp/B09C5RG6KV?tag=lightnomad-21",
-        "category": "Tech"
+        "category": "Tech",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Anker+735",
+        "facts": [
+            "Format ultra compact",
+            "Charge 3 appareils à la fois",
+            "Technologie GaNPrime"
+        ]
     },
     "gan-02": {
         "label": "UGREEN Nexode 65W",
@@ -35,7 +53,13 @@
             "chargeur UGREEN"
         ],
         "amazonUrl": "https://amazon.fr/dp/B091N7FGL9?tag=lightnomad-21",
-        "category": "Tech"
+        "category": "Tech",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=UGREEN+65W",
+        "facts": [
+            "Design élégant et compact",
+            "Protections de charge multiples",
+            "2 ports USB-C + 1 USB-A"
+        ]
     },
     "bag-01": {
         "label": "Peak Design Travel Backpack 45L",
@@ -44,7 +68,13 @@
             "Peak Design 45L"
         ],
         "amazonUrl": "https://amazon.fr/dp/B07GH3CBL4?tag=lightnomad-21",
-        "category": "One Bag"
+        "category": "One Bag",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Peak+Design",
+        "facts": [
+            "Accès rapide sur tous les côtés",
+            "Volume extensible",
+            "Garantie à vie"
+        ]
     },
     "bag-02": {
         "label": "Osprey Farpoint 40",
@@ -53,7 +83,13 @@
             "Farpoint 40"
         ],
         "amazonUrl": "https://amazon.fr/dp/B09TRV5C24?tag=lightnomad-21",
-        "category": "One Bag"
+        "category": "One Bag",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Osprey",
+        "facts": [
+            "Confort de portage exceptionnel",
+            "Format cabine avion",
+            "Rangement pour ordinateur discret"
+        ]
     },
     "anc-01": {
         "label": "Sony WH-1000XM5",
@@ -63,7 +99,13 @@
             "Sony XM5"
         ],
         "amazonUrl": "https://amazon.fr/dp/B09Y2LX7S8?tag=lightnomad-21",
-        "category": "Focus"
+        "category": "Focus",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Sony+XM5",
+        "facts": [
+            "Meilleure réduction de bruit",
+            "Autonomie de 30 heures",
+            "Microphones haute qualité"
+        ]
     },
     "wifi-01": {
         "label": "TP-Link Routeur de Voyage AC750",
@@ -72,7 +114,13 @@
             "routeur de voyage"
         ],
         "amazonUrl": "https://amazon.fr/dp/B01NAYG15H?tag=lightnomad-21",
-        "category": "Focus & Wi-Fi"
+        "category": "Focus & Wi-Fi",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=TP-Link",
+        "facts": [
+            "Plusieurs modes (Routeur, AP...)",
+            "Prise USB pour stockage/charge",
+            "Wi-Fi double bande rapide"
+        ]
     },
     "cable-01": {
         "label": "Anker PowerLine III USB-C",
@@ -81,6 +129,12 @@
             "câble Anker"
         ],
         "amazonUrl": "https://amazon.fr/dp/B088NRLM5B?tag=lightnomad-21",
-        "category": "Tech"
+        "category": "Tech",
+        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Anker+Cable",
+        "facts": [
+            "Ultra résistant (25000 pliages)",
+            "Supporte la charge 100W",
+            "Surface texturée premium"
+        ]
     }
 }

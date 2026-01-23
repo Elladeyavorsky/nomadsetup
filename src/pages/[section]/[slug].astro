@@ -48,11 +48,23 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
+
+// Detect products mentioned in the content
+const mentionedProductIds = Object.entries(affiliateLinksData)
+    .filter(([id, product]) => {
+        const terms = [product.label, ...(product.keywords || [])];
+        return terms.some(term => term && article.content.toLowerCase().includes(term.toLowerCase()));
+    })
+    .map(([id]) => id);
+
+// Merge explicit featured products with auto-detected ones (and remove duplicates)
+const finalProductIds = [...new Set([...article.featuredAffiliateProductIds, ...mentionedProductIds])];
+
 // Auto-link the content before parsing markdown
 const linkedMarkdown = autoLinkProducts(article.content);
 const contentHtml = marked.parse(linkedMarkdown);
 
-// Find related articles (same section, exclude current)
+// Get related articles (same section, exclude current)
 const relatedArticles = articlesData
     .filter(a => a.section === article.section && a.id !== article.id)
     .slice(0, 3);
@@ -76,13 +88,13 @@ const relatedArticles = articlesData
     
     <div class="content" set:html={contentHtml} />
     
-    {article.featuredAffiliateProductIds.length > 0 && (
+    {finalProductIds.length > 0 && (
         <div class="affiliate-section">
             <h3>Produits recommandés dans cet article</h3>
             <p class="disclaimer text-sm">
                 Transparence : cet article contient des liens affiliés. Cela soutient notre travail sans surcoût pour vous.
             </p>
-            {article.featuredAffiliateProductIds.map(id => (
+            {finalProductIds.map(id => (
                 <AffiliateBlock productId={id} />
             ))}
         </div>

@@ -15,50 +15,202 @@ if (!product) {
 ---
 
 <div class="affiliate-block card">
-  <div class="affiliate-info">
-      <span class="category-tag">{product.category}</span>
-      <h3 class="product-name">{product.label}</h3>
+  <div class="affiliate-image">
+    <img src={product.imageUrl} alt={product.label} loading="lazy" />
   </div>
-  <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer" class="btn">
-      Voir sur Amazon
-  </a>
+  
+  <div class="affiliate-content">
+    <div class="affiliate-info">
+        <span class="category-tag">{product.category}</span>
+        <h3 class="product-name">{product.label}</h3>
+        
+        {product.shortBenefit && (
+            <p class="product-benefit">{product.shortBenefit}</p>
+        )}
+
+        {product.facts && (
+            <div class="product-facts">
+                <span class="facts-label">Facts rapides :</span>
+                <ul>
+                    {product.facts.map((fact: string) => <li>{fact}</li>)}
+                </ul>
+            </div>
+        )}
+
+        {(product.idealFor || product.notFor) && (
+            <div class="product-usage text-sm">
+                {product.idealFor && (
+                    <div class="usage-item">
+                        <strong>Idéal pour :</strong> {product.idealFor}
+                    </div>
+                )}
+                {product.notFor && (
+                    <div class="usage-item">
+                        <strong>Pas pour :</strong> {product.notFor}
+                    </div>
+                )}
+            </div>
+        )}
+    </div>
+    
+    <div class="affiliate-actions">
+        <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer" class="btn">
+            Voir sur Amazon
+        </a>
+    </div>
+  </div>
 </div>
 
 <style>
 .affiliate-block {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    background: var(--color-bg);
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.affiliate-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.affiliate-image {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 180px;
+    margin: 0 auto;
+}
+
+.affiliate-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.affiliate-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.affiliate-info {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
-    background: #fdfdfd;
-    margin: 2rem 0;
 }
 
 .category-tag {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--color-text-light);
 }
 
 .product-name {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-    border: none;
+    margin: 0.5rem 0 0.25rem;
+    font-size: 1.25rem;
+    color: var(--color-accent);
+}
+
+.product-benefit {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin: 0.25rem 0 1rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.product-facts {
+    margin-top: 0.75rem;
+    text-align: left;
+}
+
+.facts-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text-light);
+    margin-bottom: 0.25rem;
+}
+
+.product-facts ul {
+    margin: 0 0 1rem;
     padding: 0;
+    list-style: none;
+}
+
+.product-facts li {
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text);
+    position: relative;
+    padding-left: 1rem;
+}
+
+.product-facts li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-accent);
+}
+
+.product-usage {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.usage-item {
+    font-size: 0.8rem;
+}
+
+.usage-item strong {
+    color: var(--color-accent);
+}
+
+.affiliate-actions {
+    display: flex;
+    justify-content: center;
 }
 
 @media (min-width: 640px) {
     .affiliate-block {
         flex-direction: row;
-        justify-content: space-between;
+        align-items: center;
         text-align: left;
         padding: 2rem;
     }
-    
+
+    .affiliate-image {
+        margin: 0;
+    }
+
+    .affiliate-content {
+        flex-direction: row;
+        align-items: center;
+    }
+
     .affiliate-info {
         align-items: flex-start;
+        text-align: left;
+        flex: 1;
+    }
+
+    .affiliate-actions {
+        margin-left: 2rem;
     }
 }
 </style>

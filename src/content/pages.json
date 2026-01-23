@@ -63,7 +63,7 @@
                 "budget": "50–80€",
                 "description": "Juste le nécessaire pour sauver votre dos.",
                 "productIds": [
-                    "lstand-02",
+                    "nexstand-k2",
                     "cable-01"
                 ]
             },
@@ -113,7 +113,7 @@
             ],
             "productIds": [
                 "lstand-01",
-                "lstand-02"
+                "nexstand-k2"
             ],
             "myPickId": "lstand-01",
             "faq": [
