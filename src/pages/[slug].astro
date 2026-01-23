@@ -43,8 +43,8 @@ const { page } = Astro.props;
 
     <!-- Top Pick -->
     <section class="section highlight-section">
-      <h2>🏆 Notre Choix : {affiliateData[page.myPickId]?.label}</h2>
-      <p>Le meilleur compromis performance/prix pour la plupart des voyageurs.</p>
+      <div class="highlight-badge">Notre Choix</div>
+      <p class="highlight-tagline">Le meilleur compromis performance/prix pour la plupart des voyageurs.</p>
       <AffiliateBlock productId={page.myPickId} />
     </section>
 
@@ -80,11 +80,40 @@ const { page } = Astro.props;
   }
   /* removed page-header */
   .summary-box {
-    background: #f5f5f5;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: left;
-    margin-top: 2rem;
+    background: #fafafa;
+    border: 1px solid var(--color-border);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 3rem;
+  }
+  .summary-box h3 {
+    margin-top: 0;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+  .summary-box ul {
+    margin-bottom: 0;
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  .summary-box li {
+    margin-bottom: 0;
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+  }
+  .summary-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--color-text);
+    font-weight: bold;
   }
   .disclaimer-banner {
     background: #fff;
@@ -98,9 +127,56 @@ const { page } = Astro.props;
     margin-top: 4rem;
   }
   .highlight-section {
-    border: 2px solid var(--color-accent);
-    padding: 2rem;
+    background: #fcfcfc;
+    border: 1px solid var(--color-border);
+    padding: 3rem 2rem;
+    border-radius: 12px;
+    position: relative;
+    margin-top: 5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  }
+  .highlight-badge {
+    position: absolute;
+    top: -12px;
+    left: 2rem;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 2px;
+  }
+  .highlight-tagline {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin: 0 auto 2rem;
+    max-width: 500px;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  /* Integration with AffiliateBlock */
+  .highlight-section :global(.affiliate-block) {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 1rem 0 0;
+    box-shadow: none;
+  }
+  
+  .highlight-section :global(.affiliate-block:hover) {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .highlight-section :global(.affiliate-image) {
+    background: #fff;
+    padding: 1rem;
     border-radius: 8px;
+    border: 1px solid #f0f0f0;
   }
   .criteria-list {
     columns: 2;
