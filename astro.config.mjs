@@ -3,7 +3,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://lightnomad.com', // Placeholder
+  site: 'https://elladeyavorsky.github.io',
+  base: '/light-nomad',
   integrations: [sitemap()],
   server: {
     host: true
