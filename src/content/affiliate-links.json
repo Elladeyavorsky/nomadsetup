@@ -1,140 +1,241 @@
 {
-    "lstand-01": {
-        "label": "Roost Laptop Stand V3",
+    "nexstand-k1": {
+        "label": "Nexstand K1",
         "keywords": [
-            "Roost Stand",
-            "Roost V3",
-            "support Roost"
+            "Nexstand K1"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B01C9KG8IG?tag=lightnomad-21",
-        "category": "Setup",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Roost+Stand",
+        "amazonUrl": "https://amzn.to/3NDUFjq",
+        "category": "setup",
+        "imageUrl": "https://m.media-amazon.com/images/I/61Gt-DlTSWL._AC_SX679_.jpg",
         "facts": [
-            "Ultra-léger (170g)",
-            "Hauteur réglable",
-            "Pliable en une seconde"
-        ]
+            "160 g",
+            "7 hauteurs",
+            "jusqu’à 30 cm"
+        ],
+        "notes": "Best pick premium"
     },
     "nexstand-k2": {
         "label": "Nexstand K2",
         "keywords": [
-            "Nexstand",
             "Nexstand K2"
         ],
-        "amazonUrl": "https://amzn.to/3M3Q49N",
-        "category": "Setup",
-        "imageUrl": "/products/nexstand-k2.png",
+        "amazonUrl": "https://amzn.to/4t1r97y",
+        "category": "setup",
+        "imageUrl": "https://m.media-amazon.com/images/I/51PLOyFBg9L._AC_SX679_.jpg",
+        "shortBenefit": "Support ultra léger et réglable, super pratique quand tu bouges souvent.",
         "facts": [
-            "234 g",
-            "8 hauteurs",
-            "10–17 pouces"
-        ]
-    },
-    "gan-01": {
-        "label": "Anker 735 GaNPrime 65W",
-        "keywords": [
-            "Anker 735",
-            "Anker Nano II",
-            "chargeur Anker"
+            "Léger",
+            "Réglable",
+            "Facile à ranger"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B09C5RG6KV?tag=lightnomad-21",
-        "category": "Tech",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Anker+735",
-        "facts": [
-            "Format ultra compact",
-            "Charge 3 appareils à la fois",
-            "Technologie GaNPrime"
-        ]
+        "notes": "Best value"
     },
-    "gan-02": {
-        "label": "UGREEN Nexode 65W",
+    "gan-charger-65w": {
+        "label": "Chargeur GaN USB-C 65W",
         "keywords": [
-            "UGREEN Nexode",
-            "chargeur UGREEN"
+            "Chargeur GaN USB-C 65W"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B091N7FGL9?tag=lightnomad-21",
-        "category": "Tech",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=UGREEN+65W",
+        "amazonUrl": "https://amzn.to/4r5pbkx",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/51idPYwnCyL._AC_SX679_.jpg",
+        "shortBenefit": "Un seul chargeur pour ton setup: plus simple, plus léger, moins de câbles.",
         "facts": [
-            "Design élégant et compact",
-            "Protections de charge multiples",
-            "2 ports USB-C + 1 USB-A"
-        ]
+            "USB-C PD",
+            "Compact",
+            "Charge plusieurs appareils"
+        ],
+        "notes": "Money page"
     },
-    "bag-01": {
-        "label": "Peak Design Travel Backpack 45L",
+    "usbc-cable-2m": {
+        "label": "Câble USB-C solide (2m)",
         "keywords": [
-            "Peak Design Travel",
-            "Peak Design 45L"
+            "Câble USB-C solide (2m)"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B07GH3CBL4?tag=lightnomad-21",
-        "category": "One Bag",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Peak+Design",
+        "amazonUrl": "https://amzn.to/4pYe0cK",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/71sTmhPmgtL._AC_SX679_.jpg",
+        "shortBenefit": "Le câble fiable qui évite les galères de charge lente ou de faux contact.",
         "facts": [
-            "Accès rapide sur tous les côtés",
-            "Volume extensible",
-            "Garantie à vie"
-        ]
+            "Solide",
+            "Charge rapide",
+            "Longueur pratique"
+        ],
+        "notes": "Essentiel kit charge"
     },
-    "bag-02": {
-        "label": "Osprey Farpoint 40",
+    "universal-adapter": {
+        "label": "Adaptateur universel de voyage",
         "keywords": [
-            "Osprey Farpoint",
-            "Farpoint 40"
+            "Adaptateur universel de voyage"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B09TRV5C24?tag=lightnomad-21",
-        "category": "One Bag",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Osprey",
+        "amazonUrl": "https://amzn.to/4rghmsB",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/51HWdXXs4RL._AC_SX679_.jpg",
+        "shortBenefit": "Indispensable pour brancher partout sans te demander si ça va rentrer.",
         "facts": [
-            "Confort de portage exceptionnel",
-            "Format cabine avion",
-            "Rangement pour ordinateur discret"
-        ]
+            "Multi-pays",
+            "Simple",
+            "Fiable"
+        ],
+        "notes": "À mettre dans tous les kits"
     },
-    "anc-01": {
-        "label": "Sony WH-1000XM5",
+    "travel-power-strip": {
+        "label": "Multiprise de voyage compacte",
         "keywords": [
-            "Sony WH-1000XM5",
-            "XM5",
-            "Sony XM5"
+            "Multiprise de voyage compacte"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B09Y2LX7S8?tag=lightnomad-21",
-        "category": "Focus",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Sony+XM5",
+        "amazonUrl": "https://amzn.to/3LIghL1",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/61LlYLn2HyL._AC_UL640_QL65_.jpg",
+        "shortBenefit": "Pour charger proprement plusieurs appareils with une seule prise, sans bazar.",
         "facts": [
-            "Meilleure réduction de bruit",
-            "Autonomie de 30 heures",
-            "Microphones haute qualité"
-        ]
+            "Multi-ports",
+            "Compact",
+            "Pratique en Airbnb"
+        ],
+        "notes": "Top conversion"
     },
-    "wifi-01": {
-        "label": "TP-Link Routeur de Voyage AC750",
+    "cable-organizer": {
+        "label": "Organiseur de câbles (pochette)",
         "keywords": [
-            "TP-Link AC750",
-            "routeur de voyage"
+            "Organiseur de câbles (pochette)"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B01NAYG15H?tag=lightnomad-21",
-        "category": "Focus & Wi-Fi",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=TP-Link",
+        "amazonUrl": "https://amzn.to/3ZzPwLP",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/812V9bT-yCL._AC_SY879_.jpg",
+        "shortBenefit": "Ta trousse de câbles devient enfin clean: tout est au même endroit.",
         "facts": [
-            "Plusieurs modes (Routeur, AP...)",
-            "Prise USB pour stockage/charge",
-            "Wi-Fi double bande rapide"
-        ]
+            "Organisation rapide",
+            "Accès facile",
+            "Ultra compact"
+        ],
+        "notes": "Parfait avec trousse tech"
     },
-    "cable-01": {
-        "label": "Anker PowerLine III USB-C",
+    "usbc-hub-hdmi": {
+        "label": "Hub USB-C (HDMI + USB)",
         "keywords": [
-            "Anker PowerLine",
-            "câble Anker"
+            "Hub USB-C (HDMI + USB)"
         ],
-        "amazonUrl": "https://amazon.fr/dp/B088NRLM5B?tag=lightnomad-21",
-        "category": "Tech",
-        "imageUrl": "https://placehold.co/120x120/000000/FFFFFF?text=Anker+Cable",
+        "amazonUrl": "https://amzn.to/4tcdD10",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/61ZrDcJ4nYL._AC_SX679_.jpg",
+        "shortBenefit": "Le hub utile quand tu dois brancher écran, clé USB ou carte SD en déplacement.",
         "facts": [
-            "Ultra résistant (25000 pliages)",
-            "Supporte la charge 100W",
-            "Surface texturée premium"
-        ]
+            "Ports essentiels",
+            "Plug & play",
+            "Compact"
+        ],
+        "notes": "Money page potentielle"
+    },
+    "laptop-sleeve-14": {
+        "label": "Housse laptop fine (13–14\")",
+        "keywords": [
+            "Housse laptop fine (13–14\")"
+        ],
+        "amazonUrl": "https://amzn.to/49Xlmat",
+        "category": "setup",
+        "imageUrl": "https://m.media-amazon.com/images/I/81jWpkHqQeL._AC_SX679_.jpg",
+        "shortBenefit": "Protège ton laptop sans ajouter un gros volume dans le sac.",
+        "facts": [
+            "Fine",
+            "Protectrice",
+            "Légère"
+        ],
+        "notes": "Setup protection"
+    },
+    "power-bank-travel": {
+        "label": "Power bank compatible avion",
+        "keywords": [
+            "Power bank compatible avion"
+        ],
+        "amazonUrl": "https://amzn.to/4jTch6W",
+        "category": "tech",
+        "imageUrl": "https://m.media-amazon.com/images/I/71gH0eRJcFL._AC_SY879_.jpg",
+        "shortBenefit": "Parfait pour tenir une journée sans chercher une prise partout.",
+        "facts": [
+            "Recharge en route",
+            "Fiable",
+            "Format compact"
+        ],
+        "notes": "À lier avec article avion"
+    },
+    "noise-cancelling": {
+        "label": "Casque réduction de bruit",
+        "keywords": [
+            "Casque réduction de bruit"
+        ],
+        "amazonUrl": "https://amzn.to/4qzwWiT",
+        "category": "focus-wifi",
+        "imageUrl": "https://m.media-amazon.com/images/I/61DvMw16ITL._AC_UL640_QL65_.jpg",
+        "shortBenefit": "Le meilleur upgrade si tu bosses en café: tu te mets dans ta bulle direct.",
+        "facts": [
+            "Réduction de bruit",
+            "Confort long usage",
+            "Idéal pour calls"
+        ],
+        "notes": "Focus + calls"
+    },
+    "travel-mouse": {
+        "label": "Souris compacte (Bluetooth)",
+        "keywords": [
+            "Souris compacte (Bluetooth)"
+        ],
+        "amazonUrl": "https://amzn.to/4qF2kwB",
+        "category": "setup",
+        "imageUrl": "https://m.media-amazon.com/images/I/51YZVx82mlL._AC_SX679_.jpg",
+        "shortBenefit": "Plus confortable qu’un trackpad quand tu bosses longtemps sur laptop.",
+        "facts": [
+            "Compacte",
+            "Bluetooth",
+            "Précise"
+        ],
+        "notes": "Optionnel mais utile"
+    },
+    "webcam-compact": {
+        "label": "Webcam compacte (si besoin)",
+        "keywords": [
+            "Webcam compacte (si besoin)"
+        ],
+        "amazonUrl": "https://amzn.to/4bbKEnp",
+        "category": "focus-wifi",
+        "imageUrl": "https://m.media-amazon.com/images/I/61dTSa1TG3L._AC_SX679_.jpg",
+        "shortBenefit": "Si ta webcam laptop est moyenne, ça rend tes calls plus nets sans prise de tête.",
+        "facts": [
+            "Image plus propre",
+            "Simple à installer",
+            "Compacte"
+        ],
+        "notes": "Kit appels"
+    },
+    "packing-cubes": {
+        "label": "Packing cubes (set)",
+        "keywords": [
+            "Packing cubes (set)"
+        ],
+        "amazonUrl": "https://amzn.to/4pULQ2c",
+        "category": "one-bag",
+        "imageUrl": "https://m.media-amazon.com/images/I/81cI286ZtpL._AC_SX679_.jpg",
+        "shortBenefit": "Pour un son clair en call, même quand l’environnement n’est pas parfait.",
+        "facts": [
+            "Son plus clean",
+            "Plug & play",
+            "Petit format"
+        ],
+        "notes": "One bag system"
+    },
+    "drybag-mini": {
+        "label": "Pochette étanche (mini)",
+        "keywords": [
+            "Pochette étanche (mini)"
+        ],
+        "amazonUrl": "https://amzn.to/4rce0qt",
+        "category": "one-bag",
+        "imageUrl": "https://m.media-amazon.com/images/I/711yX3VZI1L._AC_SX679_.jpg",
+        "shortBenefit": "Le truc le plus simple pour garder ton sac rangé et gagner du temps chaque jour.",
+        "facts": [
+            "Organise le sac",
+            "Gagne de la place",
+            "Accès rapide"
+        ],
+        "notes": "Protection rapide"
     }
 }

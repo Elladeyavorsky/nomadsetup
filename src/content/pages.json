@@ -64,7 +64,7 @@
                 "description": "Juste le nécessaire pour sauver votre dos.",
                 "productIds": [
                     "nexstand-k2",
-                    "cable-01"
+                    "usbc-cable-2m"
                 ]
             },
             {
@@ -73,9 +73,9 @@
                 "budget": "150–250€",
                 "description": "Le confort d'un bureau fixe, partout.",
                 "productIds": [
-                    "lstand-01",
-                    "gan-02",
-                    "cable-01"
+                    "nexstand-k1",
+                    "travel-power-strip",
+                    "usbc-cable-2m"
                 ]
             },
             {
@@ -84,10 +84,10 @@
                 "budget": "300–600€",
                 "description": "Le summum de la productivité en déplacement.",
                 "productIds": [
-                    "lstand-01",
-                    "gan-01",
-                    "anc-01",
-                    "bag-01"
+                    "nexstand-k1",
+                    "gan-charger-65w",
+                    "noise-cancelling",
+                    "packing-cubes"
                 ]
             }
         ],
@@ -112,10 +112,10 @@
                 "Facilité d'installation"
             ],
             "productIds": [
-                "lstand-01",
+                "nexstand-k1",
                 "nexstand-k2"
             ],
-            "myPickId": "lstand-01",
+            "myPickId": "nexstand-k1",
             "faq": [
                 {
                     "q": "Pourquoi utiliser un support ?",
@@ -146,10 +146,10 @@
                 "Fiabilité marque"
             ],
             "productIds": [
-                "gan-01",
-                "gan-02"
+                "gan-charger-65w",
+                "travel-power-strip"
             ],
-            "myPickId": "gan-01",
+            "myPickId": "gan-charger-65w",
             "faq": [
                 {
                     "q": "C'est quoi le GaN ?",
