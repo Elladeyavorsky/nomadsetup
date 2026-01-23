@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://elladeyavorsky.github.io',
-  base: '/light-nomad',
+  base: '/nomadsetup',
   integrations: [sitemap()],
   server: {
     host: true

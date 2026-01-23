@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import AffiliateBlock from '../../components/AffiliateBlock.astro';
 import articlesData from '../../content/articles.json';
 import affiliateLinksData from '../../content/affiliate-links.json';
 import { marked } from 'marked';
@@ -15,24 +14,12 @@ function autoLinkProducts(content) {
   let linkedContent = content;
   
   Object.values(affiliateLinksData).forEach(product => {
-    // Combine label and keywords associated with the product
     const terms = [product.label, ...(product.keywords || [])];
-    
-    // Create a Set to remove duplicates and sort by length descending 
-    // to match longest phrases first (e.g. "Anker 735" before "Anker")
     const uniqueTerms = [...new Set(terms)].sort((a, b) => b.length - a.length);
 
     uniqueTerms.forEach(term => {
       if (!term) return;
-      
-      // Regex to find the term:
-      // 1. Not inside a markdown link already (complex to perfect, but we can avoid simple cases)
-      // 2. Word boundaries or specific punctuation
-      // We use a simplified lookbehind approach or replacement callback to check context if needed.
-      // For simplicity in this static site context:
       const regex = new RegExp(`(?<!\\[)${escapeRegExp(term)}(?!\\])(?!\\([^)]+\\))`, 'g');
-      
-      // Replace with markdown link
       linkedContent = linkedContent.replace(regex, `[${term}](${product.amazonUrl})`);
     });
   });
@@ -48,17 +35,6 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props;
-
-// Detect products mentioned in the content
-const mentionedProductIds = Object.entries(affiliateLinksData)
-    .filter(([id, product]) => {
-        const terms = [product.label, ...(product.keywords || [])];
-        return terms.some(term => term && article.content.toLowerCase().includes(term.toLowerCase()));
-    })
-    .map(([id]) => id);
-
-// Merge explicit featured products with auto-detected ones (and remove duplicates)
-const finalProductIds = [...new Set([...article.featuredAffiliateProductIds, ...mentionedProductIds])];
 
 // Auto-link the content before parsing markdown
 const linkedMarkdown = autoLinkProducts(article.content);
@@ -89,30 +65,24 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </header>
     
     <div class="content" set:html={contentHtml} />
-    
-    {finalProductIds.length > 0 && (
-        <div class="affiliate-section">
-            <h3>Produits recommandés dans cet article</h3>
-            <p class="disclaimer text-sm">
-                Transparence : cet article contient des liens affiliés. Cela soutient notre travail sans surcoût pour vous.
-            </p>
-            {finalProductIds.map(id => (
-                <AffiliateBlock productId={id} />
-            ))}
-        </div>
-    )}
   </article>
 
   {relatedArticles.length > 0 && (
       <section class="related-section">
-          <h3>Lire aussi</h3>
+          <h2 class="section-title">Articles recommandés</h2>
           <ul class="related-list">
               {relatedArticles.map(a => (
-                  <li><a href={`${base}/${a.section}/${a.slug}`}>{a.title}</a></li>
+                  <li>
+                    <a href={`${base}/${a.section}/${a.slug}`}>
+                      <span class="article-category">{a.section}</span>
+                      <span class="article-title-link">{a.title}</span>
+                    </a>
+                  </li>
               ))}
           </ul>
       </section>
   )}
+
 </Layout>
 
 <style>
@@ -153,24 +123,57 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
         text-transform: uppercase;
         color: var(--color-text-light);
     }
-    .affiliate-section {
-        margin-top: 4rem;
-        padding-top: 2rem;
-        border-top: 1px solid var(--color-border);
-    }
-    .disclaimer {
-        font-style: italic;
-        margin-bottom: 2rem;
-    }
     .related-section {
-        margin-top: 4rem;
-        padding-top: 2rem;
+        margin-top: 5rem;
+        padding-top: 3rem;
         border-top: 1px solid var(--color-border);
         max-width: 65ch;
         margin-left: auto;
         margin-right: auto;
     }
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--color-text);
+    }
+    .related-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .related-list li a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        text-decoration: none;
+        padding: 1rem;
+        border-radius: 8px;
+        background: #fcfcfc;
+        border: 1px solid var(--color-border);
+        transition: all 0.2s ease;
+    }
+    .related-list li a:hover {
+        background: #fff;
+        transform: translateX(4px);
+        border-color: var(--color-accent);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .article-category {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--color-text-light);
+        font-weight: 600;
+    }
+    .article-title-link {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--color-text);
+    }
     /* Simple markdown styles */
     .content :global(h2) { margin-top: 2em; }
     .content :global(ul) { padding-left: 1.2em; }
 </style>
+

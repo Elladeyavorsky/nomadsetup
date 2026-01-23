@@ -1,4 +1,4 @@
-# Light Nomad (Nomade Léger)
+# NomadSetUp
 
 A minimalist, high-performance affiliate marketing website built with [Astro](https://astro.build).
 
