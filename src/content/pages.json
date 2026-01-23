@@ -73,7 +73,7 @@
                 "budget": "150–250€",
                 "description": "Le confort d'un bureau fixe, partout.",
                 "productIds": [
-                    "nexstand-k1",
+                    "roost-v3",
                     "travel-power-strip",
                     "usbc-cable-2m"
                 ]
@@ -84,7 +84,7 @@
                 "budget": "300–600€",
                 "description": "Le summum de la productivité en déplacement.",
                 "productIds": [
-                    "nexstand-k1",
+                    "roost-v3",
                     "gan-charger-65w",
                     "noise-cancelling",
                     "packing-cubes"
@@ -112,10 +112,10 @@
                 "Facilité d'installation"
             ],
             "productIds": [
-                "nexstand-k1",
+                "roost-v3",
                 "nexstand-k2"
             ],
-            "myPickId": "nexstand-k1",
+            "myPickId": "roost-v3",
             "faq": [
                 {
                     "q": "Pourquoi utiliser un support ?",

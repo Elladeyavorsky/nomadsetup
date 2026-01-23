@@ -1,16 +1,17 @@
 {
-    "nexstand-k1": {
-        "label": "Nexstand K1",
+    "roost-v3": {
+        "label": "Roost V3",
         "keywords": [
-            "Nexstand K1"
+            "Roost V3"
         ],
-        "amazonUrl": "https://amzn.to/3NDUFjq",
+        "amazonUrl": "https://amzn.to/3ZgE87P",
         "category": "setup",
-        "imageUrl": "https://m.media-amazon.com/images/I/61Gt-DlTSWL._AC_SX679_.jpg",
+        "imageUrl": "https://m.media-amazon.com/images/I/51-M+gE3ZgL._AC_SX679_.jpg",
+        "shortBenefit": "Le support premium ultra compact pour transformer n’importe quelle table en vrai poste de travail (café, cowork, Airbnb), sans prendre de place dans le sac.",
         "facts": [
-            "160 g",
-            "7 hauteurs",
-            "jusqu’à 30 cm"
+            "164,5",
+            "Hauteur réglable: 15 à 36 cm",
+            "Compatible PC + MacBook (maintien antidérapant)"
         ],
         "notes": "Best pick premium"
     },
@@ -19,142 +20,138 @@
         "keywords": [
             "Nexstand K2"
         ],
-        "amazonUrl": "https://amzn.to/4t1r97y",
+        "amazonUrl": "https://amzn.to/4a7xS8p",
         "category": "setup",
         "imageUrl": "https://m.media-amazon.com/images/I/51PLOyFBg9L._AC_SX679_.jpg",
         "shortBenefit": "Support ultra léger et réglable, super pratique quand tu bouges souvent.",
         "facts": [
-            "Léger",
-            "Réglable",
-            "Facile à ranger"
+            "250 g",
+            "8 hauteurs",
+            "jusqu’à 32 cm"
         ],
         "notes": "Best value"
     },
     "gan-charger-65w": {
-        "label": "Chargeur GaN USB-C 65W",
+        "label": "UGREEN Nexode USB C Charger 65W",
         "keywords": [
             "Chargeur GaN USB-C 65W"
         ],
-        "amazonUrl": "https://amzn.to/4r5pbkx",
+        "amazonUrl": "https://amzn.to/3NBaasq",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/51idPYwnCyL._AC_SX679_.jpg",
-        "shortBenefit": "Un seul chargeur pour ton setup: plus simple, plus léger, moins de câbles.",
+        "imageUrl": "https://m.media-amazon.com/images/I/51TuNcAsEuL._AC_SY879_.jpg",
+        "shortBenefit": "Un seul chargeur compact pour tout ton setup nomade (laptop + téléphone + tablette), sans trimballer plusieurs blocs.",
         "facts": [
-            "USB-C PD",
-            "Compact",
-            "Charge plusieurs appareils"
+            "65W max (USB-C Power Delivery)",
+            "3 ports (charge multi-appareils)",
+            "GaN II compact (≈ taille AirPods Pro)"
         ],
-        "notes": "Money page"
+        "notes": "Best Value"
     },
     "usbc-cable-2m": {
-        "label": "Câble USB-C solide (2m)",
+        "label": "Câble USB Type-C",
         "keywords": [
             "Câble USB-C solide (2m)"
         ],
-        "amazonUrl": "https://amzn.to/4pYe0cK",
+        "amazonUrl": "https://amzn.to/3LL6ROU",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/71sTmhPmgtL._AC_SX679_.jpg",
+        "imageUrl": "https://m.media-amazon.com/images/I/714XZIzWSSL._AC_SX679_.jpg",
         "shortBenefit": "Le câble fiable qui évite les galères de charge lente ou de faux contact.",
         "facts": [
-            "Solide",
-            "Charge rapide",
-            "Longueur pratique"
+            "100W USB-C PD (5A)",
+            "Chip e-marker (charge sécurisée)",
+            "Tressé renforcé (anti-casse)"
         ],
         "notes": "Essentiel kit charge"
     },
     "universal-adapter": {
-        "label": "Adaptateur universel de voyage",
+        "label": "TESSAN Universal Plug Adapter",
         "keywords": [
             "Adaptateur universel de voyage"
         ],
-        "amazonUrl": "https://amzn.to/4rghmsB",
+        "amazonUrl": "https://amzn.to/4tcuiBA",
         "category": "tech",
         "imageUrl": "https://m.media-amazon.com/images/I/51HWdXXs4RL._AC_SX679_.jpg",
-        "shortBenefit": "Indispensable pour brancher partout sans te demander si ça va rentrer.",
+        "shortBenefit": "L’adaptateur universel “tout-en-un” qui évite les prises surprises, avec assez de ports USB pour charger tout ton setup en voyage.",
         "facts": [
-            "Multi-pays",
-            "Simple",
-            "Fiable"
+            "4 types de prises: EU / UK / US / AU",
+            "4 USB + 1 prise (USB-C + 3 USB-A)",
+            "100–250V, jusqu’à 10A (fusibles remplaçables)"
         ],
         "notes": "À mettre dans tous les kits"
     },
     "travel-power-strip": {
-        "label": "Multiprise de voyage compacte",
+        "label": "NTONPOWER USB-C Power Strip",
         "keywords": [
             "Multiprise de voyage compacte"
         ],
-        "amazonUrl": "https://amzn.to/3LIghL1",
+        "amazonUrl": "https://amzn.to/4qfoN2p",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/61LlYLn2HyL._AC_UL640_QL65_.jpg",
-        "shortBenefit": "Pour charger proprement plusieurs appareils with une seule prise, sans bazar.",
+        "imageUrl": "https://m.media-amazon.com/images/I/51SpuVi+KqL._AC_SX679_.jpg",
+        "shortBenefit": "La multiprise parfaite en voyage: tu branches 1 seule prise, et tu charges tout ton setup (laptop + téléphone + accessoires) proprement.",
         "facts": [
-            "Multi-ports",
-            "Compact",
-            "Pratique en Airbnb"
-        ],
-        "notes": "Top conversion"
+            "USB-C PD jusqu’à 65W",
+            "6-en-1: 2 AC + 2 USB-C + 2 USB-Ae en Airbnb",
+            "Prise plate 1,2 cm (gain de place)"
+        ]
     },
     "cable-organizer": {
         "label": "Organiseur de câbles (pochette)",
         "keywords": [
             "Organiseur de câbles (pochette)"
         ],
-        "amazonUrl": "https://amzn.to/3ZzPwLP",
+        "amazonUrl": "https://amzn.to/4bgHYVC",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/812V9bT-yCL._AC_SY879_.jpg",
-        "shortBenefit": "Ta trousse de câbles devient enfin clean: tout est au même endroit.",
+        "imageUrl": "https://m.media-amazon.com/images/I/81FNqbYJqxL._AC_SX679_.jpg",
+        "shortBenefit": "La pochette parfaite pour regrouper ton setup tech (chargeur, câbles, adaptateur) et arrêter de chercher tes trucs au fond du sac.",
         "facts": [
-            "Organisation rapide",
-            "Accès facile",
-            "Ultra compact"
-        ],
-        "notes": "Parfait avec trousse tech"
+            "Format compact",
+            "Compartiments internes",
+            "Tissu recyclé 600D RPET "
+        ]
     },
     "usbc-hub-hdmi": {
         "label": "Hub USB-C (HDMI + USB)",
         "keywords": [
             "Hub USB-C (HDMI + USB)"
         ],
-        "amazonUrl": "https://amzn.to/4tcdD10",
+        "amazonUrl": "https://amzn.to/4r9Zoru",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/61ZrDcJ4nYL._AC_SX679_.jpg",
-        "shortBenefit": "Le hub utile quand tu dois brancher écran, clé USB ou carte SD en déplacement.",
+        "imageUrl": "https://m.media-amazon.com/images/I/61O1Qt6+zXL._AC_SX679_.jpg",
+        "shortBenefit": "Le hub USB-C simple qui sauve ton setup en voyage: HDMI pour écran, ports USB pour accessoires, et charge du laptop en même temps.",
         "facts": [
-            "Ports essentiels",
-            "Plug & play",
-            "Compact"
-        ],
-        "notes": "Money page potentielle"
+            "HDMI 4K",
+            "Recharge laptop jusqu’à 100W",
+            "3 ports USB (souris, clavier, clé)"
+        ]
     },
     "laptop-sleeve-14": {
         "label": "Housse laptop fine (13–14\")",
         "keywords": [
             "Housse laptop fine (13–14\")"
         ],
-        "amazonUrl": "https://amzn.to/49Xlmat",
+        "amazonUrl": "https://amzn.to/4aap8hI",
         "category": "setup",
-        "imageUrl": "https://m.media-amazon.com/images/I/81jWpkHqQeL._AC_SX679_.jpg",
-        "shortBenefit": "Protège ton laptop sans ajouter un gros volume dans le sac.",
+        "imageUrl": "https://m.media-amazon.com/images/I/811T4koxurL._AC_SX679_.jpg",
+        "shortBenefit": "Une housse fine et solide pour protéger ton laptop 13–14”, avec une poche devant pour glisser l’essentiel (chargeur, câbles, téléphone).",
         "facts": [
-            "Fine",
+            "Pour laptops 13–14 pouces",
             "Protectrice",
-            "Légère"
-        ],
-        "notes": "Setup protection"
+            "Extérieur déperlant"
+        ]
     },
     "power-bank-travel": {
         "label": "Power bank compatible avion",
         "keywords": [
             "Power bank compatible avion"
         ],
-        "amazonUrl": "https://amzn.to/4jTch6W",
+        "amazonUrl": "https://amzn.to/4pYxa2a",
         "category": "tech",
-        "imageUrl": "https://m.media-amazon.com/images/I/71gH0eRJcFL._AC_SY879_.jpg",
-        "shortBenefit": "Parfait pour tenir une journée sans chercher une prise partout.",
+        "imageUrl": "https://m.media-amazon.com/images/I/71zGmEcnQtL._AC_SY879_.jpg",
+        "shortBenefit": "Une power bank compacte qui tient dans la poche, parfaite pour voyager: USB-C entrée/sortie, charge rapide, et assez de ports pour dépanner plusieurs appareils.",
         "facts": [
-            "Recharge en route",
-            "Fiable",
-            "Format compact"
+            "10 000 mAh",
+            "USB-C entrée + sortie (2024)",
+            "Charge 3 appareils à la fois"
         ],
         "notes": "À lier avec article avion"
     },
@@ -163,9 +160,9 @@
         "keywords": [
             "Casque réduction de bruit"
         ],
-        "amazonUrl": "https://amzn.to/4qzwWiT",
+        "amazonUrl": "https://amzn.to/4sUlBvk",
         "category": "focus-wifi",
-        "imageUrl": "https://m.media-amazon.com/images/I/61DvMw16ITL._AC_UL640_QL65_.jpg",
+        "imageUrl": "https://m.media-amazon.com/images/I/61DvMw16ITL._AC_SX679_.jpg",
         "shortBenefit": "Le meilleur upgrade si tu bosses en café: tu te mets dans ta bulle direct.",
         "facts": [
             "Réduction de bruit",
@@ -179,9 +176,9 @@
         "keywords": [
             "Souris compacte (Bluetooth)"
         ],
-        "amazonUrl": "https://amzn.to/4qF2kwB",
+        "amazonUrl": "https://amzn.to/4aapyEO",
         "category": "setup",
-        "imageUrl": "https://m.media-amazon.com/images/I/51YZVx82mlL._AC_SX679_.jpg",
+        "imageUrl": "https://m.media-amazon.com/images/I/611+7RKNwGL._AC_SX679_.jpg",
         "shortBenefit": "Plus confortable qu’un trackpad quand tu bosses longtemps sur laptop.",
         "facts": [
             "Compacte",
@@ -195,7 +192,7 @@
         "keywords": [
             "Webcam compacte (si besoin)"
         ],
-        "amazonUrl": "https://amzn.to/4bbKEnp",
+        "amazonUrl": "https://amzn.to/4rb1Ii7",
         "category": "focus-wifi",
         "imageUrl": "https://m.media-amazon.com/images/I/61dTSa1TG3L._AC_SX679_.jpg",
         "shortBenefit": "Si ta webcam laptop est moyenne, ça rend tes calls plus nets sans prise de tête.",
@@ -211,31 +208,15 @@
         "keywords": [
             "Packing cubes (set)"
         ],
-        "amazonUrl": "https://amzn.to/4pULQ2c",
+        "amazonUrl": "https://amzn.to/4rgNL2h",
         "category": "one-bag",
-        "imageUrl": "https://m.media-amazon.com/images/I/81cI286ZtpL._AC_SX679_.jpg",
-        "shortBenefit": "Pour un son clair en call, même quand l’environnement n’est pas parfait.",
+        "imageUrl": "https://m.media-amazon.com/images/I/81pdOFSuXdL._AC_SX679_.jpg",
+        "shortBenefit": "Des packing cubes de compression pour garder ton sac propre et gagner de la place, surtout quand tu bouges souvent et que tu veux retrouver tes affaires vite.",
         "facts": [
-            "Son plus clean",
-            "Plug & play",
-            "Petit format"
+            "Compression (gain de place)",
+            "Compression (gain de place)",
+            "Tissu 300D oxford imperméable"
         ],
         "notes": "One bag system"
-    },
-    "drybag-mini": {
-        "label": "Pochette étanche (mini)",
-        "keywords": [
-            "Pochette étanche (mini)"
-        ],
-        "amazonUrl": "https://amzn.to/4rce0qt",
-        "category": "one-bag",
-        "imageUrl": "https://m.media-amazon.com/images/I/711yX3VZI1L._AC_SX679_.jpg",
-        "shortBenefit": "Le truc le plus simple pour garder ton sac rangé et gagner du temps chaque jour.",
-        "facts": [
-            "Organise le sac",
-            "Gagne de la place",
-            "Accès rapide"
-        ],
-        "notes": "Protection rapide"
     }
 }
