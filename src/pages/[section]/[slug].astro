@@ -68,6 +68,8 @@ const contentHtml = marked.parse(linkedMarkdown);
 const relatedArticles = articlesData
     .filter(a => a.section === article.section && a.id !== article.id)
     .slice(0, 3);
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <Layout title={article.title} description={article.excerpt}>
@@ -75,12 +77,12 @@ const relatedArticles = articlesData
     <header>
         <div class="meta text-sm">
             <div class="author-signature">
-                {article.authorName === "Ella D." && <img src="/authors/ella.jpg" alt="Ella D." class="author-img" />}
-                {article.authorName === "Gautier D." && <img src="/authors/gautier.png" alt="Gautier D." class="author-img" />}
+                {article.authorName === "Ella D." && <img src={`${base}/authors/ella.jpg`} alt="Ella D." class="author-img" />}
+                {article.authorName === "Gautier D." && <img src={`${base}/authors/gautier.png`} alt="Gautier D." class="author-img" />}
                 <span>Par {article.authorName}</span>
             </div>
             <span class="separator">•</span>
-            <a href={`/${article.section}`}>{article.section}</a> • <time>{article.publishedDate}</time>
+            <a href={`${base}/${article.section}`}>{article.section}</a> • <time>{article.publishedDate}</time>
         </div>
         <h1>{article.title}</h1>
         <p class="lead">{article.excerpt}</p>
@@ -106,7 +108,7 @@ const relatedArticles = articlesData
           <h3>Lire aussi</h3>
           <ul class="related-list">
               {relatedArticles.map(a => (
-                  <li><a href={`/${a.section}/${a.slug}`}>{a.title}</a></li>
+                  <li><a href={`${base}/${a.section}/${a.slug}`}>{a.title}</a></li>
               ))}
           </ul>
       </section>

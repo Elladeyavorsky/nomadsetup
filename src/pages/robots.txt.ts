@@ -1,13 +1,14 @@
 import type { APIRoute } from 'astro';
 
-const robotsTxt = `
+export const GET: APIRoute = (context) => {
+    const siteUrl = context.site ? context.site.toString().replace(/\/$/, '') : 'https://lightnomad.com';
+    const robotsTxt = `
 User-agent: *
 Allow: /
 
-Sitemap: https://lightnomad.com/sitemap-index.xml
+Sitemap: ${siteUrl}/sitemap-index.xml
 `.trim();
 
-export const GET: APIRoute = () => {
     return new Response(robotsTxt, {
         headers: {
             'Content-Type': 'text/plain; charset=utf-8',

@@ -3,6 +3,7 @@ import siteData from '../content/site.json';
 import articlesData from '../content/articles.json';
 
 export function GET(context) {
+    const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     return rss({
         title: siteData.siteName,
         description: siteData.description,
@@ -12,7 +13,7 @@ export function GET(context) {
             pubDate: new Date(post.publishedDate),
             description: post.excerpt,
             // Compute link to article
-            link: `/${post.section}/${post.slug}/`,
+            link: `${base}/${post.section}/${post.slug}/`,
         })),
         customData: `<language>${siteData.language}</language>`,
     });

@@ -12,11 +12,16 @@ const product = affiliateData[productId];
 if (!product) {
   throw new Error(`Product ID ${productId} not found in affiliate-links.json`);
 }
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const imageUrl = product.imageUrl.startsWith('/') 
+  ? `${base}${product.imageUrl}` 
+  : product.imageUrl;
 ---
 
 <div class="affiliate-block card">
   <div class="affiliate-image">
-    <img src={product.imageUrl} alt={product.label} loading="lazy" />
+    <img src={imageUrl} alt={product.label} loading="lazy" />
   </div>
   
   <div class="affiliate-content">

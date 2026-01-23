@@ -24,6 +24,7 @@ const articles = articlesData.filter(a => a.section === section);
 // Fallback if no hub info found (safety)
 const title = hubInfo?.title || section;
 const intro = hubInfo?.intro || '';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 ---
 
@@ -35,7 +36,7 @@ const intro = hubInfo?.intro || '';
        <ArticleCard
           title={article.title}
           excerpt={article.excerpt}
-          url={`/${article.section}/${article.slug}`}
+          url={`${base}/${article.section}/${article.slug}`}
           date={article.publishedDate}
           section={article.section}
         />

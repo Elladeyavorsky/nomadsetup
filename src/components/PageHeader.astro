@@ -6,11 +6,15 @@ interface Props {
 }
 
 const { title, description, backgroundImage } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const bgImage = backgroundImage && backgroundImage.startsWith('/') 
+  ? `${base}${backgroundImage}` 
+  : backgroundImage;
 ---
 
-<div class={`full-bleed-hero ${!backgroundImage ? 'grey-bg' : ''}`}>
-  {backgroundImage && <img src={backgroundImage} alt="" class="hero-bg" />}
-  {backgroundImage && <div class="hero-overlay"></div>}
+<div class={`full-bleed-hero ${!bgImage ? 'grey-bg' : ''}`}>
+  {bgImage && <img src={bgImage} alt="" class="hero-bg" />}
+  {bgImage && <div class="hero-overlay"></div>}
   <section class="hero-content">
     <h1>{title}</h1>
     {description && <p class="subtitle">{description}</p>}

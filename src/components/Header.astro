@@ -1,15 +1,17 @@
 ---
 import navData from '../content/navigation.json';
 import siteData from '../content/site.json';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="site-logo">{siteData.siteName}</a>
+    <a href={base} class="site-logo">{siteData.siteName}</a>
     <nav>
       <ul class="nav-list">
         {navData.mainMenu.map(item => (
-          <li><a href={item.path}>{item.label}</a></li>
+          <li><a href={`${base.replace(/\/$/, '')}${item.path}`}>{item.label}</a></li>
         ))}
       </ul>
     </nav>

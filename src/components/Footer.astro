@@ -1,14 +1,15 @@
 ---
 import siteData from '../content/site.json';
 const year = new Date().getFullYear();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
 <footer>
   <div class="container">
     <div class="footer-links">
-      <a href="/mentions-legales">Mentions Légales</a>
+      <a href={`${base}/mentions-legales`}>Mentions Légales</a>
       <span class="separator">•</span>
-      <a href="/confidentialite">Politique de Confidentialité</a>
+      <a href={`${base}/confidentialite`}>Politique de Confidentialité</a>
     </div>
     <p>&copy; {year} {siteData.siteName}. Tous droits réservés.</p>
     <p class="text-sm">
