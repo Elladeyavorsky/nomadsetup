@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
 import articlesData from '../../content/articles.json';
 import affiliateLinksData from '../../content/affiliate-links.json';
 import { marked } from 'marked';
@@ -36,8 +37,12 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 
-// Auto-link the content before parsing markdown
-const linkedMarkdown = autoLinkProducts(article.content);
+// Split content to separate "Produits mentionnés" section
+const produitsRegex = /## Produits mentionnés[\s\S]*$/;
+const contentWithoutProduits = article.content.replace(produitsRegex, '').trim();
+
+// Auto-link the content before parsing markdown (excluding Produits mentionnés)
+const linkedMarkdown = autoLinkProducts(contentWithoutProduits);
 const contentHtml = marked.parse(linkedMarkdown);
 
 // Get related articles (same section, exclude current)
@@ -66,6 +71,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     
     <div class="content" set:html={contentHtml} />
   </article>
+
+  {article.featuredAffiliateProductIds && article.featuredAffiliateProductIds.length > 0 && (
+    <section class="products-section">
+      <h2 class="section-title">Produits mentionnés</h2>
+      <div class="products-grid">
+        {article.featuredAffiliateProductIds.map(productId => (
+          <ProductCard productId={productId} />
+        ))}
+      </div>
+    </section>
+  )}
 
   {relatedArticles.length > 0 && (
       <section class="related-section">
@@ -122,6 +138,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     .meta a {
         text-transform: uppercase;
         color: var(--color-text-light);
+    }
+    .products-section {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid var(--color-border);
+    }
+    .products-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
     .related-section {
         margin-top: 5rem;

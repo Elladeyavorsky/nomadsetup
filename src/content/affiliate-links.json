@@ -2,7 +2,10 @@
     "roost-v3": {
         "label": "Roost V3",
         "keywords": [
-            "Roost V3"
+            "Roost V3",
+            "support laptop voyage",
+            "support laptop",
+            "support laptop pliable"
         ],
         "amazonUrl": "https://amzn.to/3ZgE87P",
         "category": "setup",
@@ -18,7 +21,9 @@
     "nexstand-k2": {
         "label": "Nexstand K2",
         "keywords": [
-            "Nexstand K2"
+            "Nexstand K2",
+            "support laptop voyage",
+            "support laptop"
         ],
         "amazonUrl": "https://amzn.to/4a7xS8p",
         "category": "setup",
@@ -34,7 +39,11 @@
     "gan-charger-65w": {
         "label": "Chargeur GaN USB-C 65W",
         "keywords": [
-            "Chargeur GaN USB-C 65W"
+            "Chargeur GaN USB-C 65W",
+            "UGREEN Nexode 65W",
+            "chargeur GaN",
+            "bloc GaN",
+            "chargeur GaN de 65W"
         ],
         "amazonUrl": "https://amzn.to/3NBaasq",
         "category": "tech",
@@ -50,7 +59,10 @@
     "usbc-cable-2m": {
         "label": "Câble USB-C solide (2m)",
         "keywords": [
-            "Câble USB-C solide (2m)"
+            "Câble USB-C solide (2m)",
+            "câble USB-C",
+            "câble de 2m",
+            "câbles USB-C"
         ],
         "amazonUrl": "https://amzn.to/3LL6ROU",
         "category": "tech",
@@ -66,7 +78,10 @@
     "universal-adapter": {
         "label": "Adaptateur universel de voyage",
         "keywords": [
-            "Adaptateur universel de voyage"
+            "Adaptateur universel de voyage",
+            "Adaptateur universel TESSAN",
+            "adaptateur universel",
+            "adaptateur de voyage universel"
         ],
         "amazonUrl": "https://amzn.to/4tcuiBA",
         "category": "tech",
@@ -82,7 +97,8 @@
     "travel-power-strip": {
         "label": "Multiprise de voyage compacte",
         "keywords": [
-            "Multiprise de voyage compacte"
+            "Multiprise de voyage compacte",
+            "multiprise de voyage"
         ],
         "amazonUrl": "https://amzn.to/4qfoN2p",
         "category": "tech",
@@ -97,7 +113,9 @@
     "cable-organizer": {
         "label": "Organiseur de câbles (pochette)",
         "keywords": [
-            "Organiseur de câbles (pochette)"
+            "Organiseur de câbles (pochette)",
+            "trousse tech",
+            "organiseur de câbles"
         ],
         "amazonUrl": "https://amzn.to/4bgHYVC",
         "category": "tech",
@@ -112,7 +130,10 @@
     "usbc-hub-hdmi": {
         "label": "Hub USB-C (HDMI + USB)",
         "keywords": [
-            "Hub USB-C (HDMI + USB)"
+            "Hub USB-C (HDMI + USB)",
+            "Hub USB-C (HDMI + multiports)",
+            "hub USB-C",
+            "hub compact"
         ],
         "amazonUrl": "https://amzn.to/4r9Zoru",
         "category": "tech",
@@ -127,7 +148,9 @@
     "laptop-sleeve-14": {
         "label": "Housse laptop fine (13–14\")",
         "keywords": [
-            "Housse laptop fine (13–14\")"
+            "Housse laptop fine (13–14\")",
+            "Housse laptop fine",
+            "housse laptop"
         ],
         "amazonUrl": "https://amzn.to/4aap8hI",
         "category": "setup",
@@ -142,7 +165,11 @@
     "power-bank-travel": {
         "label": "Power bank compatible avion",
         "keywords": [
-            "Power bank compatible avion"
+            "Power bank compatible avion",
+            "Power bank compacte",
+            "batterie externe",
+            "batterie externe fine",
+            "power bank"
         ],
         "amazonUrl": "https://amzn.to/4pYxa2a",
         "category": "tech",
@@ -156,9 +183,12 @@
         "notes": "À lier avec article avion"
     },
     "noise-cancelling": {
-        "label": "Casque réduction de bruit",
+        "label": "Écouteurs à réduction de bruit",
         "keywords": [
-            "Casque réduction de bruit"
+            "Écouteurs à réduction de bruit",
+            "Écouteurs à réduction de bruit",
+            "Écouteurs ANC",
+            "Écouteurs anti bruit"
         ],
         "amazonUrl": "https://amzn.to/4sUlBvk",
         "category": "focus-wifi",
@@ -174,7 +204,9 @@
     "travel-mouse": {
         "label": "Souris compacte (Bluetooth)",
         "keywords": [
-            "Souris compacte (Bluetooth)"
+            "Souris compacte (Bluetooth)",
+            "souris Bluetooth",
+            "souris compacte"
         ],
         "amazonUrl": "https://amzn.to/4aapyEO",
         "category": "setup",
@@ -206,14 +238,17 @@
     "packing-cubes": {
         "label": "Packing cubes (set)",
         "keywords": [
-            "Packing cubes (set)"
+            "Packing cubes (set)",
+            "Packing cubes (set de compression)",
+            "cubes de rangement",
+            "cubes de rangement compressibles",
+            "packing cubes"
         ],
         "amazonUrl": "https://amzn.to/4rgNL2h",
         "category": "one-bag",
         "imageUrl": "https://m.media-amazon.com/images/I/81pdOFSuXdL._AC_SX679_.jpg",
         "shortBenefit": "Des packing cubes de compression pour garder ton sac propre et gagner de la place, surtout quand tu bouges souvent et que tu veux retrouver tes affaires vite.",
         "facts": [
-            "Compression (gain de place)",
             "Compression (gain de place)",
             "Tissu 300D oxford imperméable"
         ],

@@ -10,10 +10,6 @@
                 {
                     "label": "Voir les kits",
                     "url": "/kits"
-                },
-                {
-                    "label": "Voir les indispensables",
-                    "url": "#essentials"
                 }
             ]
         },
