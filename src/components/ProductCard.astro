@@ -150,4 +150,29 @@ const imageUrl = product.imageUrl.startsWith('/')
 .amazon-btn svg {
   flex-shrink: 0;
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .product-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .product-image {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1.5rem;
+  }
+
+  .product-image img {
+    max-height: 200px;
+    width: auto;
+  }
+
+  .product-info {
+    padding: 1.25rem;
+  }
+}
 </style>
