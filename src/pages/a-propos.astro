@@ -1,0 +1,105 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const metaTitle = "À propos de NomadSetup | Télétravail nomade & voyage minimaliste";
+const metaDescription = "NomadSetup, un couple de digital nomads. Conseils concrets, setups minimalistes et matériel utile pour travailler confortablement en voyage léger.";
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout title={metaTitle} description={metaDescription}>
+  <PageHeader 
+    title="À propos de NomadSetup: télétravail nomade et voyage minimaliste" 
+    description="Deux digital nomads, un sac chacun, et des setups simples pour travailler confortablement en voyage."
+  />
+
+  <div class="container about-content">
+    <img src={`${base}/images/about-us.jpg`} alt="Ella et Gautier, créateurs de NomadSetup" class="about-image" />
+
+    <p>NomadSetup est un site dédié au télétravail nomade et au voyage minimaliste.</p>
+
+    <p>Nous sommes un couple de digital nomads qui travaillent à distance tout en voyageant léger, avec un sac à dos chacun et un setup simple mais efficace.</p>
+
+    <p>Depuis plusieurs années, nous vivons entre Barcelone et nos voyages.<br>
+    Même quand nous sommes chez nous, nous travaillons souvent depuis des cafés ou des coworkings.<br>
+    Et dès que possible, nous partons découvrir de nouveaux endroits tout en continuant à travailler.</p>
+
+    <p>Au fil de nos expériences, nous avons appris à travailler depuis des cafés, coworkings, Airbnb, road trips et environnements très différents.<br>
+    Cela nous a poussé à simplifier notre façon de voyager et à créer des setups minimalistes mais confortables.</p>
+
+    <p>Gautier est freelance développeur mobile depuis plus de huit ans.<br>
+    Ella travaille dans l’automatisation et la création de solutions IA.</p>
+
+    <p>Le télétravail est notre quotidien.</p>
+
+    <p>NomadSetup est né pour partager ce qui fonctionne vraiment sur le terrain.</p>
+
+    <p>Nous parlons de :</p>
+    <ul>
+      <li>voyage léger (one bag)</li>
+      <li>télétravail en déplacement</li>
+      <li>organisation minimaliste</li>
+      <li>matériel pratique pour nomades</li>
+    </ul>
+
+    <p>Notre objectif : voyager plus librement sans sacrifier confort ni productivité.</p>
+
+    <p>Certaines recommandations contiennent des liens affiliés afin de faire vivre le site, sans coût supplémentaire pour les lecteurs.</p>
+
+    <div class="sculpted-block">
+      <h3>Notre philosophie :</h3>
+      <p>Voyager léger.<br>
+      Travailler confortablement.<br>
+      Se simplifier la vie.</p>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .about-content {
+    margin-bottom: 4rem;
+  }
+
+  .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: block;
+    object-fit: cover;
+  }
+
+  /* Typography consistency with articles */
+  .about-content p {
+    margin-bottom: 1.5em;
+  }
+
+  .about-content ul {
+    margin-bottom: 1.5em;
+    padding-left: 1.5em;
+  }
+
+  .about-content li {
+    margin-bottom: 0.5em;
+  }
+
+  /* Philosophy block styling */
+  .sculpted-block {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #fafafa;
+    border-left: 4px solid #333;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .sculpted-block h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  .sculpted-block p {
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+</style>
