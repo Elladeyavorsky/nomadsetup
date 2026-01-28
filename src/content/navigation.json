@@ -21,8 +21,8 @@
             "path": "/kits"
         },
         {
-            "label": "À propos",
-            "path": "/a-propos"
+            "label": "About-us",
+            "path": "/about-us"
         }
     ]
 }
