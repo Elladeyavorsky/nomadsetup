@@ -6,9 +6,11 @@ import siteData from '../content/site.json';
 import pagesData from '../content/pages.json';
 import articlesData from '../content/articles.json';
 
-// Get latest 6 articles
-const latestArticles = articlesData
-  .sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime())
+const today = new Date().toISOString().split('T')[0];
+
+const latestArticles = [...articlesData]
+  .filter(a => a.publishedDate <= today)
+  .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
   .slice(0, 6);
 
 const { hero, essentials } = pagesData.home;

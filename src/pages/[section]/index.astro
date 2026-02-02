@@ -16,10 +16,15 @@ export async function getStaticPaths() {
 
 const { section } = Astro.props;
 
+const today = new Date().toISOString().split('T')[0];
+
 // Get hub data
 // @ts-ignore
 const hubInfo = pagesData.hubs[section];
-const articles = articlesData.filter(a => a.section === section);
+
+const articles = [...articlesData]
+  .filter(a => a.section === section && a.publishedDate <= today)
+  .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
 
 // Fallback if no hub info found (safety)
 const title = hubInfo?.title || section;

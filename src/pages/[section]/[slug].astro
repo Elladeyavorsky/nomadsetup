@@ -45,9 +45,12 @@ const contentWithoutProduits = article.content.replace(produitsRegex, '').trim()
 const linkedMarkdown = autoLinkProducts(contentWithoutProduits);
 const contentHtml = marked.parse(linkedMarkdown);
 
-// Get related articles (same section, exclude current)
-const relatedArticles = articlesData
-    .filter(a => a.section === article.section && a.id !== article.id)
+const today = new Date().toISOString().split('T')[0];
+
+// Get related articles (same section, exclude current, only published)
+const relatedArticles = [...articlesData]
+    .filter(a => a.section === article.section && a.id !== article.id && a.publishedDate <= today)
+    .sort((a, b) => b.publishedDate.localeCompare(a.publishedDate))
     .slice(0, 3);
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
