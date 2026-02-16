@@ -43,7 +43,18 @@ const contentWithoutProduits = article.content.replace(produitsRegex, '').trim()
 
 // Auto-link the content before parsing markdown (excluding Produits mentionnés)
 const linkedMarkdown = autoLinkProducts(contentWithoutProduits);
-const contentHtml = marked.parse(linkedMarkdown);
+
+// Custom renderer to add target="_blank" to external links
+const renderer = new marked.Renderer();
+renderer.link = (arg) => {
+  const { href, title, text } = arg;
+  const isExternal = href.startsWith('http');
+  const target = isExternal ? ' target="_blank"' : '';
+  const rel = isExternal ? ' rel="noopener noreferrer"' : '';
+  return `<a href="${href}"${target}${rel}${title ? ` title="${title}"` : ''}>${text}</a>`;
+};
+
+const contentHtml = marked.parse(linkedMarkdown, { renderer });
 
 const today = new Date().toISOString().split('T')[0];
 
