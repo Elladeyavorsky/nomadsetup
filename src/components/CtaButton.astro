@@ -9,7 +9,7 @@ interface Props {
   const isExternal = href.startsWith('http');
   ---
   
-  <a href={href} class="btn" target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>{label}</a>
+  <a href={href} class="btn" target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined} data-umami-event={isExternal ? "affiliate-click" : undefined} data-umami-event-url={isExternal ? href : undefined}>{label}</a>
   
   <style>
       /* Already styled globally but component wrapper is good practice */
